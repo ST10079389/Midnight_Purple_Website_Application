@@ -1,0 +1,84 @@
+﻿@using ST10079389_Kaushil_Dajee_PROG6212_POE.Models
+@model HoursViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    @*I use this to get my value for my start date this way their is no issues with getting the date*@
+    @using (Html.BeginForm("Details", "StudyRecords", FormMethod.Get))
+    {
+        var moduleList = new List<SelectListItem>();
+        <b>View Between: </b>
+        
+        <form>
+            <label for="startDate">Start Date:</label>
+            <input type="date" name="startDate" format="yyyy-MM-dd">
+            <input type="submit" value="Submit">
+        </form>
+
+
+    }
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Module Name
+            </th>
+
+            <th>
+                Self Study Hours Per Week
+            </th>
+            <th>
+               Total Hours Studied
+            </th>
+            <th>
+               Total Hours Remaining
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var value in Model.studyRecords)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => value.Module.ModuleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => value.Module.SelfStudyHoursPerWeek)
+                    
+                </td>
+
+                @foreach (var Hours in ViewBag.ModuleTotalHours)
+                {
+                    if (Hours.ModuleId == value.ModuleId)
+                    {
+                        <td>@Hours.TotalHoursStudied</td>
+
+                        int v1 = (value.Module.SelfStudyHoursPerWeek - Hours.TotalHoursStudied);
+                        if (v1 <= 0 )
+                        {
+                            
+                            <td>Congratulations, you have surpassed the total hours studied consider taking a break!</td>
+                            @* I make this so if the value is greater i dont have to stress as i found it easier this way to calculate the ramining hours instead of through the controller*@
+                        }
+                        else
+                        {
+                            <td>@(value.Module.SelfStudyHoursPerWeek - Hours.TotalHoursStudied)</td>
+                        }
+
+                    }
+
+                }
+            </tr>
+        }
+    </tbody>
+
+</table>

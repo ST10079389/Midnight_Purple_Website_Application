@@ -1,0 +1,45 @@
+﻿@model ST10079389_Kaushil_Dajee_PROG6212_POE.Models.StudyRecord
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+@*Can create a record for when u studied*@
+<h4>StudyRecord</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="ModuleId" class="control-label">Module Name</label>
+                    <select asp-for="ModuleId" class="form-control" asp-items="ViewBag.ModuleId"></select>
+                </div>
+                <label asp-for="StudyDates" class="control-label">Date Studied</label>
+                <input asp-for="StudyDates" class="form-control" type="date"/>
+                <span asp-validation-for="StudyDates" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoursStudied" class="control-label">Hours Studied</label>
+                <input asp-for="HoursStudied" class="form-control" />
+                <span asp-validation-for="HoursStudied" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<div>
+    <button style="background-color:blue; border-radius:5px; border:none">
+        <a asp-action="Index" style="text-decoration:none; color:white">Back to List</a>
+    </button>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

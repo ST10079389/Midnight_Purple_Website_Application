@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ST10079389_Kaushil_Dajee_PROG6212_POE.Models.SemesterDate>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Schedule</h1>
+<p>Goodluck for the Semester!!</p>
+@*allows you to view your upcoming semesters information*@
+<p>
+    <button style="background-color:darkblue; border:none; border-radius:15px;width:105px; height:auto">
+    <a asp-action="Create" style="color:white; text-decoration:none">Create New</a>
+    </button>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Semester Starting Date
+            </th>
+            <th>
+                Number Of Weeks
+            </th>
+            <th>
+                Semester Ending Date
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SemesterStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfWeeks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SemesterEnd)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

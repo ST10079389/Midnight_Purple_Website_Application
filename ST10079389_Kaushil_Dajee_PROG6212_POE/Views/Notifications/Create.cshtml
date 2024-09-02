@@ -1,0 +1,39 @@
+﻿@model ST10079389_Kaushil_Dajee_PROG6212_POE.Models.Notification
+
+@{
+    ViewData["Title"] = "Create";
+}
+@*Allows you to create a notification*@
+<h1>Set Notification</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NotificationDate" class="control-label">Notification Date</label>
+                <input asp-for="NotificationDate" class="form-control" type="date" />
+                <span asp-validation-for="NotificationDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModuleId" class="control-label">Module Name</label>
+                <select asp-for="ModuleId" class ="form-control" asp-items="ViewBag.ModuleId"></select>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <button style="background-color:blue; border-radius:5px; border:none">
+        <a asp-action="Index" style="text-decoration:none; color:white">View Other Notifications</a>
+    </button>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

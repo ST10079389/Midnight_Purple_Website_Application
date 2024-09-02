@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ST10079389_Kaushil_Dajee_PROG6212_POE.Models.StudyRecord>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Study Sessions</h1>
+@*Can view the records*@
+<p>
+    <button style="background-color:purple; border-radius:10px; border:none;">
+        <a asp-action="Create" style="text-decoration:none; color:white ;font-size:20px">Add Study Record</a>
+    </button>
+
+    <button style="background-color:blue; border-radius:10px; border:none;">
+        <a asp-action="Details" style="text-decoration:none; color: white; font-size:20px">View Progress</a>
+    </button>
+
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Module Name
+            </th>
+            <th>
+                Date Studied
+            </th>
+            <th>
+                Hours Studied
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Module.ModuleName)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudyDates)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoursStudied)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

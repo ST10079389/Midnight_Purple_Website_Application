@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ST10079389_Kaushil_Dajee_PROG6212_POE.Models.ModuleInformation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@*Diaplys the data approriately*@
+<h1>Modules For The Semester</h1>
+
+<p>
+    <button style="background-color:purple; border-radius:10px; border:none;">
+        <a asp-action="Create" style="text-decoration:none; color:white ;font-size:20px">Add Module</a>
+    </button>
+
+        <button style="background-color:red; border:solid; border-radius:10px;">
+            <a asp-action="Details" style="border:none; color:white; font-size:20px; text-decoration:none">Set Notification</a>
+        </button>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Module Name
+            </th>
+            <th>
+                Module Code
+            </th>
+            <th>
+                Number Of Credits
+            </th>
+            <th>
+                Hours of Class Per Week
+            </th>
+            <th>
+                Selft Study Hours Per Week
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModuleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModuleCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfCredits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassHours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SelfStudyHoursPerWeek)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

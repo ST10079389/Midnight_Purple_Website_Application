@@ -1,0 +1,12 @@
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\bin\Debug\net7.0\MidnightPurpleLibrary.deps.json
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\bin\Debug\net7.0\MidnightPurpleLibrary.dll
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\bin\Debug\net7.0\MidnightPurpleLibrary.pdb
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\MidnightPurpleLibrary.csproj.AssemblyReference.cache
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\MidnightPurpleLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\MidnightPurpleLibrary.AssemblyInfoInputs.cache
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\MidnightPurpleLibrary.AssemblyInfo.cs
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\MidnightPurpleLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\MidnightPurpleLibrary.dll
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\refint\MidnightPurpleLibrary.dll
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\MidnightPurpleLibrary.pdb
+C:\Users\Ditesh\OneDrive - ADvTECH Ltd\Documents\Assignments\PROG POE\MidnightPurpleLibrary\obj\Debug\net7.0\ref\MidnightPurpleLibrary.dll

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ST10079389_Kaushil_Dajee_PROG6212_POE.Models.Notification>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@*Diaplys the data approriately*@
+<h1>Notifications Set</h1>
+
+<p>
+    <button style="background-color:red; border-radius:10px; border:none;">
+        <a asp-action="Create" style="text-decoration:none; color:white ;font-size:20px">Set Notification</a>
+    </button>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Module)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NotificationDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Module.ModuleName)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotificationDate)
+                </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.NotificationID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NotificationID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

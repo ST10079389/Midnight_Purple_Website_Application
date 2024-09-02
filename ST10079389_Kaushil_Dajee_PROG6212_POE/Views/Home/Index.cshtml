@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+
+        window.onload = function () {
+            alert("@ViewBag.Message");
+        };
+    </script>
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome To The Midnight Purple Study App</h1>
+    <p>This Website is used to save modules, notify you when it is time to study and help you manage your time effectively.
+        Please begin by entering your Semesters Information And then proceed to add Modules.
+        Goodluck for the Semester!!!</p>
+</div>
